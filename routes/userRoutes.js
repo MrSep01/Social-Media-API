@@ -102,16 +102,29 @@ router.post('/:userId/friends', async (req, res) => {
       return res.status(400).json({ message: 'Friend ID is required in the request body.' });
     }
 
+    // Check if the friend ID corresponds to an existing user
+    const friendExists = await User.exists({ _id: friendId });
+    if (!friendExists) {
+      return res.status(404).json({ message: 'Friend user not found.' });
+    }
+
+    // Update the user document by adding the friend's ID to their friends array
     const updatedUser = await User.findByIdAndUpdate(
       req.params.userId,
-      { $addToSet: { friends: friendId } },
-      { new: true }
+      { $addToSet: { friends: friendId } }, // Use $addToSet to avoid duplicate entries
+      { new: true, runValidators: true } // Return the updated document and run schema validators
     );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found.' });
+    }
+
     res.json({ message: 'Friend added successfully', data: updatedUser });
   } catch (err) {
     res.status(500).json({ message: 'Error adding friend', error: err.message });
   }
 });
+
 
 // DELETE to remove a friend from a user's friend list
 router.delete('/:userId/friends/:friendId', async (req, res) => {
