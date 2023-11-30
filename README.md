@@ -71,7 +71,6 @@ Creating a `seed.js` script to populate the database with initial data for testi
 - **DELETE `/api/users/:userId`**: Deletes a user and their associated thoughts.
 - **POST `/api/users/:userId/friends/:friendId`**: Adds a friend to a user's friend list.
 .....
-
 ## Repository
 
 [GitHub Repository Link](https://github.com/MrSep01/Social-Media-API)
