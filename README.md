@@ -70,11 +70,11 @@ Creating a `seed.js` script to populate the database with initial data for testi
 - **PUT `/api/users/:userId`**: Updates a user's information.
 - **DELETE `/api/users/:userId`**: Deletes a user and their associated thoughts.
 - **POST `/api/users/:userId/friends/:friendId`**: Adds a friend to a user's friend list.
-- ... (list all other endpoints)
+.....
 
 ## Repository
 
-[GitHub Repository Link](https://github.com/your-username/social-network-api)
+[GitHub Repository Link](https://github.com/MrSep01/Social-Media-API)
 
 ## Demo
 
@@ -87,4 +87,8 @@ The Social Network API is a robust backend solution that encapsulates the critic
 
 ## License & Contribution 📜
 
-Contributions are welcome! This project is open-source and available under the MIT License.
+This project is open for contributions and is licensed under the MIT License.
+
+## Contact 📞
+
+For any inquiries, feel free to contact at sep.alamouti@sepalamouti.com
