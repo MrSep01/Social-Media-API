@@ -78,7 +78,7 @@ Creating a `seed.js` script to populate the database with initial data for testi
 ## Demo
 
 A demo of the API in action can be viewed here:
-[API Demo Video](#)
+[API Demo Video](https://youtu.be/_Zbg4_2q_vo)
 
 ## Conclusion 🏁
 
